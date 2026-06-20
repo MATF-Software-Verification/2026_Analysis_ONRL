@@ -194,7 +194,3 @@ While the full leak report can be found in the log.<br>
    Range (min … max):   15.712 s … 16.137 s    5 runs
    ```
    The build is consistent (σ = 0.175 s) with a mean of ~15.9 seconds. The small standard deviation means that the build time is stable and consistent. User time (12.7 s) is less than wall time (15.9 s).
-
-
-## Conclusions
-(To be completed after analysis)
