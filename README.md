@@ -176,7 +176,24 @@ While the full leak report can be found in the log.<br>
    - ```util::sf::to_string``` in ```util.cpp``` — CCN 25, 29 NLOC. This is a switch statement with one case per SFML event type (24 cases). Each case adds 1 to the CCN, making this look complex even though it's really not.
 
 6. Hyperfine <br>
-TODO
+   Hyperfine is a command-line benchmarking tool. It runs a command repeatedly and reports statistics: mean time, standard deviation, and min/max across all runs. Install with ```sudo apt install hyperfine``` and run ```bash tools/hyperfine/run_hyperfine.sh``` from the repo root. <br><br>
+
+   ONRL is an interactive game that never exits on its own, so benchmarking the executable directly is not something worth doing — hyperfine would hang waiting for it to finish. Instead, the build time is benchmarked, which measures how long the compiler takes to process the full project. The command used is:
+   ```
+   hyperfine --warmup 1 --runs 5 'cd ONRL && cmake --build build --clean-first 2>/dev/null' --export-json tools/hyperfine/hyperfine.json 2>&1 | tee tools/hyperfine/hyperfine.log
+   ```
+   - ```--warmup 1``` runs the command once before measuring to warm up the disk cache, so cached files don't skew the first run
+   - ```--runs 5``` sets the number of timed runs to average over
+   - ```--clean-first``` forces cmake to recompile everything from scratch on each run, ensuring a fair and consistent measurement
+   - ```2>/dev/null``` suppresses cmake's build output so it doesn't clutter the terminal
+   - ```--export-json``` saves the full results (mean, standard deviation, min and max per run) to a JSON file for reference <br><br>
+
+   Results:
+   ```
+   Time (mean ± σ):     15.889 s ±  0.175 s    [User: 12.701 s, System: 3.187 s]
+   Range (min … max):   15.712 s … 16.137 s    5 runs
+   ```
+   The build is consistent (σ = 0.175 s) with a mean of ~15.9 seconds. The small standard deviation means that the build time is stable and consistent. User time (12.7 s) is less than wall time (15.9 s).
 
 
 ## Conclusions

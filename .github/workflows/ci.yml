@@ -45,3 +45,6 @@ jobs:
 
       - name: Run lizard
         run: bash tools/lizard/run_lizard.sh
+
+      - name: Run hyperfine
+        run: bash tools/hyperfine/run_hyperfine.sh
