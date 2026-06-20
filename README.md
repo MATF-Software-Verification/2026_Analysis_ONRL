@@ -31,7 +31,7 @@ sudo apt update
 sudo apt install libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev \
                  libxi-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev \
                  libudev-dev libopenal-dev libflac-dev libvorbis-dev libogg-dev \ 
-                 libfreetype6-dev
+                 libfreetype6-dev libsfml-dev
 ```
 <br>
 This did the trick for me.
