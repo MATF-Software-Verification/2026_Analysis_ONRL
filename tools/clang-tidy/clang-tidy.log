@@ -1,0 +1,963 @@
+[1/5] Processing file /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp.
+33391 warnings and 4 errors generated.
+Error while processing /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp.
+[2/5] Processing file /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp.
+68053 warnings and 10 errors generated.
+Error while processing /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp.
+[3/5] Processing file /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp.
+102919 warnings and 10 errors generated.
+Error while processing /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp.
+[4/5] Processing file /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp.
+136536 warnings and 10 errors generated.
+Error while processing /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp.
+[5/5] Processing file /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp.
+174582 warnings and 16 errors generated.
+Error while processing /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp.
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:6:63: warning: the parameter 'font_path' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+    6 | Console::Console(uint32_t width, uint32_t height, std::string font_path, uint32_t font_size) : width(width), height(height), font_size(font_size) {
+      |                                                               ^
+      |                                                   const      &
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:22:24: warning: narrowing conversion from 'float' to 'uint32_t' (aka 'unsigned int') [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   22 |     uint32_t padding = std::max(text_rect.left, text_rect.top);
+      |                        ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:24:23: warning: narrowing conversion from 'float' to 'uint32_t' (aka 'unsigned int') [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   24 |     glyph_px_width  = text_rect.width  + padding*2;
+      |                       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:24:42: warning: narrowing conversion from 'uint32_t' (aka 'unsigned int') to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   24 |     glyph_px_width  = text_rect.width  + padding*2;
+      |                                          ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:25:23: warning: narrowing conversion from 'float' to 'uint32_t' (aka 'unsigned int') [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   25 |     glyph_px_height = text_rect.height + padding*2;
+      |                       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:25:42: warning: narrowing conversion from 'uint32_t' (aka 'unsigned int') to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   25 |     glyph_px_height = text_rect.height + padding*2;
+      |                                          ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:28:64: warning: narrowing conversion from 'float' to 'uint32_t' (aka 'unsigned int') [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   28 |     glyph_v_edge_pad = (text_rect.left - text_rect.top ) > 0 ? (text_rect.left - text_rect.top ) : 0;
+      |                                                                ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:29:64: warning: narrowing conversion from 'float' to 'uint32_t' (aka 'unsigned int') [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   29 |     glyph_h_edge_pad = (text_rect.top  - text_rect.left) > 0 ? (text_rect.top  - text_rect.left) : 0;
+      |                                                                ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:53:20: warning: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'uint32_t' (aka 'unsigned int') [bugprone-implicit-widening-of-multiplication-result]
+   53 |     glyphs.reserve(width * height);
+      |                    ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:53:20: note: make conversion explicit to silence this warning
+    2 |     glyphs.reserve(width * height);
+      |                    ^~~~~~~~~~~~~~
+      |                    static_cast<size_type>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:53:20: note: perform multiplication in a wider type
+   53 |     glyphs.reserve(width * height);
+      |                    ^~~~~
+      |                    static_cast<size_type>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:57:19: warning: variable name 'fg' is too short, expected at least 3 characters [readability-identifier-length]
+   57 |         sf::Color fg = sf::Color{211, 211, 211};
+      |                   ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:57:34: warning: 211 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   57 |         sf::Color fg = sf::Color{211, 211, 211};
+      |                                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:57:39: warning: 211 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   57 |         sf::Color fg = sf::Color{211, 211, 211};
+      |                                       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:57:44: warning: 211 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   57 |         sf::Color fg = sf::Color{211, 211, 211};
+      |                                            ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:58:19: warning: variable name 'bg' is too short, expected at least 3 characters [readability-identifier-length]
+   58 |         sf::Color bg = sf::Color{ 34,  34,  34};
+      |                   ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:58:35: warning: 34 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   58 |         sf::Color bg = sf::Color{ 34,  34,  34};
+      |                                   ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:58:40: warning: 34 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   58 |         sf::Color bg = sf::Color{ 34,  34,  34};
+      |                                        ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:58:45: warning: 34 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   58 |         sf::Color bg = sf::Color{ 34,  34,  34};
+      |                                             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:59:20: warning: variable name 'c' is too short, expected at least 3 characters [readability-identifier-length]
+   59 |         const char c = ' ';
+      |                    ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:80:34: warning: narrowing conversion from 'uint32_t' (aka 'unsigned int') to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   80 |     bg_rect.setSize(sf::Vector2f(glyph_px_width, glyph_px_height));
+      |                                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:80:50: warning: narrowing conversion from 'uint32_t' (aka 'unsigned int') to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   80 |     bg_rect.setSize(sf::Vector2f(glyph_px_width, glyph_px_height));
+      |                                                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:86:29: warning: narrowing conversion from 'uint32_t' (aka 'unsigned int') to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   86 |         bg_rect.setPosition(glyph_x, glyph_y);
+      |                             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:86:38: warning: narrowing conversion from 'uint32_t' (aka 'unsigned int') to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   86 |         bg_rect.setPosition(glyph_x, glyph_y);
+      |                                      ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:91:26: warning: narrowing conversion from 'uint32_t' (aka 'unsigned int') to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   91 |         text.setPosition(glyph_x, glyph_y);
+      |                          ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:91:35: warning: narrowing conversion from 'uint32_t' (aka 'unsigned int') to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   91 |         text.setPosition(glyph_x, glyph_y);
+      |                                   ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:100:28: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  100 | sf::RenderWindow& Console::get_window() noexcept {
+      | ~~~~~~~~~~~~~~~~~          ^
+      | auto                                             -> sf::RenderWindow&
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:104:34: warning: parameter name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+  104 | void Console::set_glyph(uint32_t x, uint32_t y, Console::glyph_t glyph) {
+      |                                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:104:46: warning: parameter name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+  104 | void Console::set_glyph(uint32_t x, uint32_t y, Console::glyph_t glyph) {
+      |                                              ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:112:1: warning: return type 'const Console::glyph_t' is 'const'-qualified at the top level, which may reduce code readability without improving const correctness [readability-const-return-type]
+  112 | const Console::glyph_t Console::get_glyph(uint32_t x, uint32_t y) const {
+      | ^~~~~
+note: this fix will not be applied because it overlaps with another fix
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:112:33: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  112 | const Console::glyph_t Console::get_glyph(uint32_t x, uint32_t y) const {
+      | ~~~~~~~~~~~~~~~~~~~~~~          ^
+      | auto                                                                    -> const Console::glyph_t
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:112:52: warning: parameter name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+  112 | const Console::glyph_t Console::get_glyph(uint32_t x, uint32_t y) const {
+      |                                                    ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:112:64: warning: parameter name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+  112 | const Console::glyph_t Console::get_glyph(uint32_t x, uint32_t y) const {
+      |                                                                ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:130:35: warning: parameter name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+  130 | void Console::set_region(uint32_t x, uint32_t y, uint32_t w, uint32_t h, std::vector<Console::glyph_t> glyphs) {
+      |                                   ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:130:47: warning: parameter name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+  130 | void Console::set_region(uint32_t x, uint32_t y, uint32_t w, uint32_t h, std::vector<Console::glyph_t> glyphs) {
+      |                                               ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:130:59: warning: parameter name 'w' is too short, expected at least 3 characters [readability-identifier-length]
+  130 | void Console::set_region(uint32_t x, uint32_t y, uint32_t w, uint32_t h, std::vector<Console::glyph_t> glyphs) {
+      |                                                           ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:130:71: warning: parameter name 'h' is too short, expected at least 3 characters [readability-identifier-length]
+  130 | void Console::set_region(uint32_t x, uint32_t y, uint32_t w, uint32_t h, std::vector<Console::glyph_t> glyphs) {
+      |                                                                       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:140:26: warning: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'uint32_t' (aka 'unsigned int') [bugprone-implicit-widening-of-multiplication-result]
+  140 |     if (glyphs.size() != w * h) {
+      |                          ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:140:26: note: make conversion explicit to silence this warning
+  140 |     if (glyphs.size() != w * h) {
+      |                          ^~~~~
+      |                          static_cast<size_type>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:140:26: note: perform multiplication in a wider type
+  140 |     if (glyphs.size() != w * h) {
+      |                          ^
+      |                          static_cast<size_type>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:150:23: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  150 | sf::Vector2u Console::get_mouse_tile_xy() const {
+      | ~~~~~~~~~~~~          ^
+      | auto                                            -> sf::Vector2u
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:156:12: warning: avoid repeating the return type from the declaration; use a braced initializer list instead [modernize-return-braced-init-list]
+  156 |     return sf::Vector2u(tile_x, tile_y);
+      |            ^~~~~~~~~~~~~              ~
+      |            {                          }
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp:159:15: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  159 | bool Console::poll_event(sf::Event& event) noexcept { return window.pollEvent(event); }
+      | ~~~~          ^
+      | auto                                                -> bool
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:11:1: warning: replace macro with enum [cppcoreguidelines-macro-to-enum,modernize-macro-to-enum]
+   11 | #define GW_OFF_X 16
+      | ^~~~~~~            
+      |                  = ,
+   12 | #define GW_OFF_Y 0
+      | ~~~~~~~
+      |                  =
+   13 | 
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:11:9: warning: macro 'GW_OFF_X' defines an integral constant; prefer an enum instead [cppcoreguidelines-macro-to-enum,modernize-macro-to-enum]
+   11 | #define GW_OFF_X 16
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:11:9: warning: macro 'GW_OFF_X' used to declare a constant; consider using a 'constexpr' constant [cppcoreguidelines-macro-usage]
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:12:9: warning: macro 'GW_OFF_Y' defines an integral constant; prefer an enum instead [cppcoreguidelines-macro-to-enum,modernize-macro-to-enum]
+   12 | #define GW_OFF_Y 0
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:12:9: warning: macro 'GW_OFF_Y' used to declare a constant; consider using a 'constexpr' constant [cppcoreguidelines-macro-usage]
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:18:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   18 | sf::Vector2u get_random_unoccupied_tile(const game::Map& map, const game::Unit) {
+      | ~~~~~~~~~~~~ ^
+      | auto                                                                            -> sf::Vector2u
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:18:79: warning: the const qualified parameter #2 is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   18 | sf::Vector2u get_random_unoccupied_tile(const game::Map& map, const game::Unit) {
+      |                                                                               ^
+      |                                                                               &
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:18:79: warning: all parameters should be named in a function [readability-named-parameter]
+   18 | sf::Vector2u get_random_unoccupied_tile(const game::Map& map, const game::Unit) {
+      |                                                                               ^
+      |                                                                                /*unused*/
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:20:20: warning: variable name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+   20 |         const auto x = rand() % map.get_size().x;
+      |                    ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:21:20: warning: variable name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+   21 |         const auto y = rand() % map.get_size().y;
+      |                    ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:28:12: warning: enum 'PLAYER_ACTION' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   28 | enum class PLAYER_ACTION {
+      |            ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:38:15: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   38 | PLAYER_ACTION get_player_action(const sf::Event& event) {
+      | ~~~~~~~~~~~~~ ^
+      | auto                                                    -> PLAYER_ACTION
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:39:19: warning: do not access members of unions; use (boost::)variant instead [cppcoreguidelines-pro-type-union-access]
+   39 |     switch (event.key.code) {
+      |                   ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:50:5: error: first parameter of 'main' (argument count) must be of type 'int' [clang-diagnostic-error]
+   50 | int main(char** argv, int argc) {
+      |     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:50:5: error: second parameter of 'main' (argument array) must be of type 'char **' [clang-diagnostic-error]
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:50:5: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   50 | int main(char** argv, int argc) {
+      | ~~~ ^
+      | auto                            -> int
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:50:5: warning: function 'main' has cognitive complexity of 67 (threshold 25) [readability-function-cognitive-complexity]
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:61:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+   61 |     for (uint32_t i = 0; i < 12; ++i) {
+      |     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:62:29: note: +2, including nesting penalty of 1, nesting level increased to 2
+   62 |         goblins[i] = {(i==0)?'G':'g', Color::COPPER, true};
+      |                             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:69:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+   69 |     while (true) {
+      |     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:72:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+   72 |         for (auto& goblin : goblins) {
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:79:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+   79 |         if (cursor_xy.x >= GW_OFF_X
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:82:10: note: +1
+   82 |          && cursor_xy.y <  GW_OFF_Y + map.get_size().y) {
+      |          ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:90:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+   90 |         while (console.poll_event(event)) {
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:91:13: note: +3, including nesting penalty of 2, nesting level increased to 3
+   91 |             switch (event.type) {
+      |             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:94:21: note: +4, including nesting penalty of 3, nesting level increased to 4
+   94 |                     if (event.key.control && event.key.code == sf::Keyboard::C) {
+      |                     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:94:43: note: +1
+   94 |                     if (event.key.control && event.key.code == sf::Keyboard::C) {
+      |                                           ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:103:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  103 |         switch (action) {
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:125:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  125 |         for (auto& unit : game::Unit::all_units) {
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:126:13: note: +3, including nesting penalty of 2, nesting level increased to 3
+  126 |             while (unit->can_act()) {
+      |             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:127:17: note: +4, including nesting penalty of 3, nesting level increased to 4
+  127 |                 if (!unit->ai_controlled) continue;
+      |                 ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:135:63: note: nesting level increased to 4
+  135 |                 std::sort(positions.begin(), positions.end(), [&](const auto& a, const auto& b) {
+      |                                                               ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:138:17: note: +4, including nesting penalty of 3, nesting level increased to 4
+  138 |                 if (positions.size() > 0) {
+      |                 ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:139:21: note: +5, including nesting penalty of 4, nesting level increased to 5
+  139 |                     for (const auto& pos : positions) {
+      |                     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:140:25: note: +6, including nesting penalty of 5, nesting level increased to 6
+  140 |                         if (map.get_tile(pos.x, pos.y).mossification > 0) {
+      |                         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:147:17: note: +4, including nesting penalty of 3, nesting level increased to 4
+  147 |                 if (moss) {
+      |                 ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:154:21: note: +5, including nesting penalty of 4, nesting level increased to 5
+  154 |                     if (map.get_tile(unit->x, unit->y).mossification > 0) {
+      |                     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:159:21: note: +5, including nesting penalty of 4, nesting level increased to 5
+  159 |                     if (pathopt && pathopt->size() > 0) {
+      |                     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:159:33: note: +1
+  159 |                     if (pathopt && pathopt->size() > 0) {
+      |                                 ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:163:19: note: +1, nesting level increased to 4
+  163 |                 } else {
+      |                   ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:167:21: note: +5, including nesting penalty of 4, nesting level increased to 5
+  167 |                     while (x == unit->x && y == unit->y) {
+      |                     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:167:41: note: +1
+  167 |                     while (x == unit->x && y == unit->y) {
+      |                                         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:51:16: warning: use nullptr [modernize-use-nullptr]
+   51 |     srand(time(NULL));
+      |                ^~~~
+      |                nullptr
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:53:26: warning: 120 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   53 |     gfx::Console console(120, 60, "data/font/kongtext.ttf");
+      |                          ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:53:31: warning: 60 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   53 |     gfx::Console console(120, 60, "data/font/kongtext.ttf");
+      |                               ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:55:19: warning: 104 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   55 |     game::Map map(104, 50);
+      |                   ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:55:24: warning: 50 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   55 |     game::Map map(104, 50);
+      |                        ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:60:5: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays,modernize-avoid-c-arrays]
+   60 |     game::Unit goblins[12];
+      |     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:60:24: warning: 12 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   60 |     game::Unit goblins[12];
+      |                        ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:61:30: warning: 12 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   61 |     for (uint32_t i = 0; i < 12; ++i) {
+      |                              ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:62:9: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+   62 |         goblins[i] = {(i==0)?'G':'g', Color::COPPER, true};
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:63:9: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+   63 |         goblins[i].set_xy(map, map.get_random_passable());
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:88:9: warning: uninitialized record type: 'event' [cppcoreguidelines-pro-type-member-init]
+   88 |         sf::Event event;
+      |         ^              
+      |                        {}
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:94:31: warning: do not access members of unions; use (boost::)variant instead [cppcoreguidelines-pro-type-union-access]
+   94 |                     if (event.key.control && event.key.code == sf::Keyboard::C) {
+      |                               ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:94:52: warning: do not access members of unions; use (boost::)variant instead [cppcoreguidelines-pro-type-union-access]
+   94 |                     if (event.key.control && event.key.code == sf::Keyboard::C) {
+      |                                                    ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:103:17: warning: enumeration values 'CANCEL' and 'NONE' not handled in switch [clang-diagnostic-switch]
+  103 |         switch (action) {
+      |                 ^~~~~~
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:127:42: warning: statement should be inside braces [readability-braces-around-statements]
+  127 |                 if (!unit->ai_controlled) continue;
+      |                                          ^         
+      |                                           {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:135:79: warning: parameter name 'a' is too short, expected at least 3 characters [readability-identifier-length]
+  135 |                 std::sort(positions.begin(), positions.end(), [&](const auto& a, const auto& b) {
+      |                                                                               ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:135:94: warning: parameter name 'b' is too short, expected at least 3 characters [readability-identifier-length]
+  135 |                 std::sort(positions.begin(), positions.end(), [&](const auto& a, const auto& b) {
+      |                                                                                              ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:138:21: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
+  138 |                 if (positions.size() > 0) {
+      |                     ^~~~~~~~~~~~~~~~~~~~
+      |                     !positions.empty()
+/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_vector.h:1088:7: note: method 'vector'::empty() defined here
+ 1088 |       empty() const _GLIBCXX_NOEXCEPT
+      |       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:149:21: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays,modernize-avoid-c-arrays]
+  149 |                     sf::Vertex line[] = {
+      |                     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:150:49: warning: narrowing conversion from 'uint32_t' (aka 'unsigned int') to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+  150 |                         sf::Vertex(sf::Vector2f(unit->x, unit->y), sf::Color::White),
+      |                                                 ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:150:58: warning: narrowing conversion from 'uint32_t' (aka 'unsigned int') to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+  150 |                         sf::Vertex(sf::Vector2f(unit->x, unit->y), sf::Color::White),
+      |                                                          ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:151:49: warning: narrowing conversion from 'unsigned int' to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+  151 |                         sf::Vertex(sf::Vector2f(moss->x, moss->y), sf::Color::Green)
+      |                                                 ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:151:58: warning: narrowing conversion from 'unsigned int' to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+  151 |                         sf::Vertex(sf::Vector2f(moss->x, moss->y), sf::Color::Green)
+      |                                                          ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:153:47: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+  153 |                     console.get_window().draw(line, 2, sf::Lines);
+      |                                               ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:159:36: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
+  159 |                     if (pathopt && pathopt->size() > 0) {
+      |                                    ^~~~~~~~~~~~~~~~~~~
+      |                                    !pathopt->empty()
+/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_vector.h:1088:7: note: method 'vector'::empty() defined here
+ 1088 |       empty() const _GLIBCXX_NOEXCEPT
+      |       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:165:30: warning: variable name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+  165 |                     uint32_t x = unit->x;
+      |                              ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp:166:30: warning: variable name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+  166 |                     uint32_t y = unit->y;
+      |                              ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:12:47: warning: 2 adjacent parameters of 'make_room' of similar type ('uint32_t') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+   12 | void make_room(std::vector<Map::Tile>& tiles, uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride) {
+      |                                               ^~~~~~~~~~~~~~~~~~~~~~
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:12:56: note: the first parameter in the range is 'x'
+   12 | void make_room(std::vector<Map::Tile>& tiles, uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride) {
+      |                                                        ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:12:68: note: the last parameter in the range is 'y'
+   12 | void make_room(std::vector<Map::Tile>& tiles, uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride) {
+      |                                                                    ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:12:56: warning: parameter name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+   12 | void make_room(std::vector<Map::Tile>& tiles, uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride) {
+      |                                                        ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:12:68: warning: parameter name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+   12 | void make_room(std::vector<Map::Tile>& tiles, uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride) {
+      |                                                                    ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:12:71: warning: 3 adjacent parameters of 'make_room' of similar type ('uint32_t') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+   12 | void make_room(std::vector<Map::Tile>& tiles, uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride) {
+      |                                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:12:80: note: the first parameter in the range is 'w'
+   12 | void make_room(std::vector<Map::Tile>& tiles, uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride) {
+      |                                                                                ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:12:104: note: the last parameter in the range is 'stride'
+   12 | void make_room(std::vector<Map::Tile>& tiles, uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride) {
+      |                                                                                                        ^~~~~~
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:12:80: warning: parameter name 'w' is too short, expected at least 3 characters [readability-identifier-length]
+   12 | void make_room(std::vector<Map::Tile>& tiles, uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride) {
+      |                                                                                ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:12:92: warning: parameter name 'h' is too short, expected at least 3 characters [readability-identifier-length]
+   12 | void make_room(std::vector<Map::Tile>& tiles, uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride) {
+      |                                                                                            ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:28:6: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   28 | bool BSP_recurse_region(
+      | ~~~~ ^
+      | auto
+   29 |         std::vector<Map::Tile>& tiles,
+   30 |         uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride,
+   31 |         float split_factor = 0.2) {
+      |                                   -> bool
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:28:6: warning: function 'BSP_recurse_region' has cognitive complexity of 30 (threshold 25) [readability-function-cognitive-complexity]
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:35:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+   35 |     if (w < MIN_WIDTH || h < MIN_HEIGHT) {
+      |     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:35:23: note: +1
+   35 |     if (w < MIN_WIDTH || h < MIN_HEIGHT) {
+      |                       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:40:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+   40 |     if (w > h) {
+      |     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:49:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+   49 |         if (!left || !right) make_room(tiles, x, y, w, h, stride);
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:49:19: note: +1
+   49 |         if (!left || !right) make_room(tiles, x, y, w, h, stride);
+      |                   ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:51:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+   51 |         if (left && right) {
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:51:18: note: +1
+   51 |         if (left && right) {
+      |                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:54:13: note: +3, including nesting penalty of 2, nesting level increased to 3
+   54 |             for (uint32_t cy = corridor_y-1; cy <= corridor_y+1; cy++) {
+      |             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:55:17: note: +4, including nesting penalty of 3, nesting level increased to 4
+   55 |                 for (uint32_t i = x + 1; i < x + w-1; i++) {
+      |                 ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:60:7: note: +1, nesting level increased to 1
+   60 |     } else {
+      |       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:69:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+   69 |         if (!top || !bot) make_room(tiles, x, y, w, h, stride);
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:69:18: note: +1
+   69 |         if (!top || !bot) make_room(tiles, x, y, w, h, stride);
+      |                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:71:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+   71 |         if (top && bot) {
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:71:17: note: +1
+   71 |         if (top && bot) {
+      |                 ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:74:13: note: +3, including nesting penalty of 2, nesting level increased to 3
+   74 |             for (uint32_t cx = corridor_x-1; cx <= corridor_x+1; cx++) {
+      |             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:75:17: note: +4, including nesting penalty of 3, nesting level increased to 4
+   75 |                 for (uint32_t i = y + 1; i < y + h-1; i++) {
+      |                 ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:30:18: warning: parameter name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+   30 |         uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride,
+      |                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:30:30: warning: parameter name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+   30 |         uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride,
+      |                              ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:30:42: warning: parameter name 'w' is too short, expected at least 3 characters [readability-identifier-length]
+   30 |         uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride,
+      |                                          ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:30:54: warning: parameter name 'h' is too short, expected at least 3 characters [readability-identifier-length]
+   30 |         uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride,
+      |                                                      ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:30:57: warning: 2 adjacent parameters of 'BSP_recurse_region' of convertible types are easily swapped by mistake [bugprone-easily-swappable-parameters]
+   30 |         uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride,
+      |                                                         ^~~~~~~~~~~~~~~~
+   31 |         float split_factor = 0.2) {
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:30:66: note: the first parameter in the range is 'stride'
+   30 |         uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride,
+      |                                                                  ^~~~~~
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:31:15: note: the last parameter in the range is 'split_factor'
+   31 |         float split_factor = 0.2) {
+      |               ^~~~~~~~~~~~
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:30:57: note: 
+   30 |         uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint32_t stride,
+      |                                                         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:31:9: note: 'uint32_t' and 'float' may be implicitly converted: 'uint32_t' (as 'unsigned int') -> 'float', 'float' -> 'uint32_t' (as 'unsigned int')
+   31 |         float split_factor = 0.2) {
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:31:30: warning: 0.2 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   31 |         float split_factor = 0.2) {
+      |                              ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:42:26: warning: narrowing conversion from 'double' to 'uint32_t' (aka 'unsigned int') [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   42 |         uint32_t split = x + w * (split_factor + (rand() % 100) / 100.0 * (1 - split_factor * 2));
+      |                          ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:42:60: warning: 100 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   42 |         uint32_t split = x + w * (split_factor + (rand() % 100) / 100.0 * (1 - split_factor * 2));
+      |                                                            ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:49:29: warning: statement should be inside braces [readability-braces-around-statements]
+   49 |         if (!left || !right) make_room(tiles, x, y, w, h, stride);
+      |                             ^                                     
+      |                              {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:62:26: warning: narrowing conversion from 'double' to 'uint32_t' (aka 'unsigned int') [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   62 |         uint32_t split = y + h * (split_factor + (rand() % 100) / 100.0 * (1 - split_factor * 2));
+      |                          ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:62:60: warning: 100 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   62 |         uint32_t split = y + h * (split_factor + (rand() % 100) / 100.0 * (1 - split_factor * 2));
+      |                                                            ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:69:26: warning: statement should be inside braces [readability-braces-around-statements]
+   69 |         if (!top || !bot) make_room(tiles, x, y, w, h, stride);
+      |                          ^                                     
+      |                           {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:84:22: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   84 | std::vector<uint8_t> CA_count_neighbors(const std::vector<Map::Tile>& tiles, uint32_t w, uint32_t h) {
+      | ~~~~~~~~~~~~~~~~~~~~ ^
+      | auto                                                                                                 -> std::vector<uint8_t>
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:84:87: warning: parameter name 'w' is too short, expected at least 3 characters [readability-identifier-length]
+   84 | std::vector<uint8_t> CA_count_neighbors(const std::vector<Map::Tile>& tiles, uint32_t w, uint32_t h) {
+      |                                                                                       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:84:99: warning: parameter name 'h' is too short, expected at least 3 characters [readability-identifier-length]
+   84 | std::vector<uint8_t> CA_count_neighbors(const std::vector<Map::Tile>& tiles, uint32_t w, uint32_t h) {
+      |                                                                                                   ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:85:76: warning: parameter name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+   85 |     auto get_neighbors = [&](const std::vector<Map::Tile>& tiles, uint32_t x, uint32_t y) {
+      |                                                                            ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:85:88: warning: parameter name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+   85 |     auto get_neighbors = [&](const std::vector<Map::Tile>& tiles, uint32_t x, uint32_t y) {
+      |                                                                                        ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:86:54: warning: statement should be inside braces [readability-braces-around-statements]
+   86 |         if (x == 0 || y == 0 || x == w-1 || y == h-1) return uint8_t(-1);
+      |                                                      ^                   
+      |                                                       {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:90:38: warning: statement should be inside braces [readability-braces-around-statements]
+   90 |                 if (i == 0 && j == 0) continue;
+      |                                      ^         
+      |                                       {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:91:56: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+   91 |                 if (tiles[(y+j)*w + (x+i)].passable == false) neighbors++;
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |                     !tiles[(y+j)*w + (x+i)].passable
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:91:62: warning: statement should be inside braces [readability-braces-around-statements]
+   91 |                 if (tiles[(y+j)*w + (x+i)].passable == false) neighbors++;
+      |                                                              ^            
+      |                                                               {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:96:36: warning: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'uint32_t' (aka 'unsigned int') [bugprone-implicit-widening-of-multiplication-result]
+   96 |     std::vector<uint8_t> neighbors(w*h);
+      |                                    ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:96:36: note: make conversion explicit to silence this warning
+    2 |     std::vector<uint8_t> neighbors(w*h);
+      |                                    ^~~
+      |                                    static_cast<size_type>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:96:36: note: perform multiplication in a wider type
+   96 |     std::vector<uint8_t> neighbors(w*h);
+      |                                    ^
+      |                                    static_cast<size_type>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:98:18: warning: variable name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+   98 |         uint32_t x = i%w;
+      |                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:99:18: warning: variable name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+   99 |         uint32_t y = i/w;
+      |                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:105:74: warning: parameter name 'w' is too short, expected at least 3 characters [readability-identifier-length]
+  105 | void CA_anneal_region_impl(std::vector<Map::Tile>& tiles, const uint32_t w, const uint32_t h) {
+      |                                                                          ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:105:92: warning: parameter name 'h' is too short, expected at least 3 characters [readability-identifier-length]
+  105 | void CA_anneal_region_impl(std::vector<Map::Tile>& tiles, const uint32_t w, const uint32_t h) {
+      |                                                                                            ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:108:18: warning: Value stored to 'x' during its initialization is never read [clang-analyzer-deadcode.DeadStores]
+  108 |         uint32_t x = i%w;
+      |                  ^   ~~~
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:108:18: note: Value stored to 'x' during its initialization is never read
+  108 |         uint32_t x = i%w;
+      |                  ^   ~~~
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:108:18: warning: variable name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+  108 |         uint32_t x = i%w;
+      |                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:109:18: warning: Value stored to 'y' during its initialization is never read [clang-analyzer-deadcode.DeadStores]
+  109 |         uint32_t y = i/w;
+      |                  ^   ~~~
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:109:18: note: Value stored to 'y' during its initialization is never read
+  109 |         uint32_t y = i/w;
+      |                  ^   ~~~
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:109:18: warning: variable name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+  109 |         uint32_t y = i/w;
+      |                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:110:30: warning: statement should be inside braces [readability-braces-around-statements]
+  110 |         if (neighbors[i] < 4) tiles[i].passable = true;
+      |                              ^
+      |                               {
+  111 |         else if (neighbors[i] >= 4) tiles[i].passable = false;
+      |         } 
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:111:36: warning: statement should be inside braces [readability-braces-around-statements]
+  111 |         else if (neighbors[i] >= 4) tiles[i].passable = false;
+      |                                    ^                          
+      |                                     {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:115:69: warning: parameter name 'w' is too short, expected at least 3 characters [readability-identifier-length]
+  115 | void CA_anneal_region(std::vector<Map::Tile>& tiles, const uint32_t w, const uint32_t h, const uint32_t passes) {
+      |                                                                     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:115:72: warning: 2 adjacent parameters of 'CA_anneal_region' of similar type ('const uint32_t') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+  115 | void CA_anneal_region(std::vector<Map::Tile>& tiles, const uint32_t w, const uint32_t h, const uint32_t passes) {
+      |                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:115:87: note: the first parameter in the range is 'h'
+  115 | void CA_anneal_region(std::vector<Map::Tile>& tiles, const uint32_t w, const uint32_t h, const uint32_t passes) {
+      |                                                                                       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:115:105: note: the last parameter in the range is 'passes'
+  115 | void CA_anneal_region(std::vector<Map::Tile>& tiles, const uint32_t w, const uint32_t h, const uint32_t passes) {
+      |                                                                                                         ^~~~~~
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:115:87: warning: parameter name 'h' is too short, expected at least 3 characters [readability-identifier-length]
+  115 | void CA_anneal_region(std::vector<Map::Tile>& tiles, const uint32_t w, const uint32_t h, const uint32_t passes) {
+      |                                                                                       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:121:62: warning: parameter name 'w' is too short, expected at least 3 characters [readability-identifier-length]
+  121 | void enmossify(std::vector<Map::Tile>& tiles, const uint32_t w, const uint32_t h) {
+      |                                                              ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:121:80: warning: parameter name 'h' is too short, expected at least 3 characters [readability-identifier-length]
+  121 | void enmossify(std::vector<Map::Tile>& tiles, const uint32_t w, const uint32_t h) {
+      |                                                                                ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:126:12: warning: narrowing conversion from 'uint32_t' (aka 'unsigned int') to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+  126 |     while (moss_tiles < N_tiles * mossfactor) {
+      |            ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:126:25: warning: narrowing conversion from 'uint32_t' (aka 'unsigned int') to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+  126 |     while (moss_tiles < N_tiles * mossfactor) {
+      |                         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:127:18: warning: variable name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+  127 |         uint32_t x = rand() % w;
+      |                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:128:18: warning: variable name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+  128 |         uint32_t y = rand() % h;
+      |                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:130:30: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  130 |         if (tile.passable == true) {
+      |             ~~~~~~~~~~~~~~~~~^~~~
+      |             tile.passable
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:131:35: warning: 0.1 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  131 |             tile.mossification += 0.1;
+      |                                   ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:140:18: warning: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'uint32_t' (aka 'unsigned int') [bugprone-implicit-widening-of-multiplication-result]
+  140 |     tiles.resize(width*height);
+      |                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:140:18: note: make conversion explicit to silence this warning
+  140 |     tiles.resize(width*height);
+      |                  ^~~~~~~~~~~~
+      |                  static_cast<size_type>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:140:18: note: perform multiplication in a wider type
+  140 |     tiles.resize(width*height);
+      |                  ^~~~~
+      |                  static_cast<size_type>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:141:28: warning: performing an implicit widening conversion to type 'size_t' (aka 'unsigned long') of a multiplication performed in type 'uint32_t' (aka 'unsigned int') [bugprone-implicit-widening-of-multiplication-result]
+  141 |     for (size_t i = 0; i < width*height; ++i) tiles[i].passable = false;
+      |                            ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:141:28: note: make conversion explicit to silence this warning
+  141 |     for (size_t i = 0; i < width*height; ++i) tiles[i].passable = false;
+      |                            ^~~~~~~~~~~~
+      |                            static_cast<size_t>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:141:28: note: perform multiplication in a wider type
+  141 |     for (size_t i = 0; i < width*height; ++i) tiles[i].passable = false;
+      |                            ^~~~~
+      |                            static_cast<size_t>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:141:46: warning: statement should be inside braces [readability-braces-around-statements]
+  141 |     for (size_t i = 0; i < width*height; ++i) tiles[i].passable = false;
+      |                                              ^                          
+      |                                               {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:144:59: warning: 0.4 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  144 |     BSP_recurse_region(tiles, 0, 0, width, height, width, 0.4);
+      |                                                           ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:153:53: warning: parameter name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+  153 | void Map::render_to(gfx::Console& console, uint32_t x, uint32_t y) noexcept {
+      |                                                     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:153:65: warning: parameter name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+  153 | void Map::render_to(gfx::Console& console, uint32_t x, uint32_t y) noexcept {
+      |                                                                 ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:154:28: warning: performing an implicit widening conversion to type 'size_t' (aka 'unsigned long') of a multiplication performed in type 'uint32_t' (aka 'unsigned int') [bugprone-implicit-widening-of-multiplication-result]
+  154 |     for (size_t i = 0; i < width*height; ++i) {
+      |                            ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:154:28: note: make conversion explicit to silence this warning
+  154 |     for (size_t i = 0; i < width*height; ++i) {
+      |                            ^~~~~~~~~~~~
+      |                            static_cast<size_t>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:154:28: note: perform multiplication in a wider type
+  154 |     for (size_t i = 0; i < width*height; ++i) {
+      |                            ^~~~~
+      |                            static_cast<size_t>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:159:19: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  159 | sf::Vector2u Map::get_size() const {
+      | ~~~~~~~~~~~~      ^
+      | auto                               -> sf::Vector2u
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:163:23: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  163 | const Map::Tile& Map::get_tile(const size_t x, const size_t y) const {
+      | ~~~~~~~~~~~~~~~~      ^
+      | auto                                                                 -> const Map::Tile&
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:163:45: warning: parameter name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+  163 | const Map::Tile& Map::get_tile(const size_t x, const size_t y) const {
+      |                                             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:163:61: warning: parameter name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+  163 | const Map::Tile& Map::get_tile(const size_t x, const size_t y) const {
+      |                                                             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:172:17: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  172 | Map::Tile& Map::get_tile_mut(const size_t x, const size_t y) {
+      | ~~~~~~~~~~      ^
+      | auto                                                         -> Map::Tile&
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:172:43: warning: parameter name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+  172 | Map::Tile& Map::get_tile_mut(const size_t x, const size_t y) {
+      |                                           ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:172:59: warning: parameter name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+  172 | Map::Tile& Map::get_tile_mut(const size_t x, const size_t y) {
+      |                                                           ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:182:47: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  182 | std::optional<std::vector<sf::Vector2u>> Map::find_path(const sf::Vector2u& start, const sf::Vector2u& end) const {
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~      ^
+      | auto                                                                                                              -> std::optional<std::vector<sf::Vector2u>>
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:182:47: warning: function 'find_path' has cognitive complexity of 30 (threshold 25) [readability-function-cognitive-complexity]
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:190:26: note: nesting level increased to 1
+  190 |     auto get_neighbors = [&](const sf::Vector2u& pos) {
+      |                          ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:192:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  192 |         if (pos.x > 0) neighbors.push_back({pos.x-1, pos.y});
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:193:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  193 |         if (pos.y > 0) neighbors.push_back({pos.x, pos.y-1});
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:194:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  194 |         if (pos.x < width-1) neighbors.push_back({pos.x+1, pos.y});
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:195:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  195 |         if (pos.y < height-1) neighbors.push_back({pos.x, pos.y+1});
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:199:22: note: nesting level increased to 1
+  199 |     auto heuristic = [&](const sf::Vector2u& a, const sf::Vector2u& b) {
+      |                      ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:203:29: note: nesting level increased to 1
+  203 |     auto reconstruct_path = [&](const sf::Vector2u& current) {
+      |                             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:205:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  205 |         while (pos != start) {
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:216:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  216 |     while (open.size()) {
+      |     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:220:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  220 |         for (const auto& node : open) {
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:221:13: note: +3, including nesting penalty of 2, nesting level increased to 3
+  221 |             if (f_score[node.y * width + node.x] < lowest_f_score) {
+      |             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:227:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  227 |         if (current == end) {
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:235:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  235 |         for (const auto& neighbor : get_neighbors(current)) {
+      |         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:237:13: note: +3, including nesting penalty of 2, nesting level increased to 3
+  237 |             if (!get_tile(neighbor.x, neighbor.y).passable) continue;
+      |             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:239:13: note: +3, including nesting penalty of 2, nesting level increased to 3
+  239 |             if (std::find(closed.begin(), closed.end(), neighbor) != closed.end()) continue;
+      |             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:243:13: note: +3, including nesting penalty of 2, nesting level increased to 3
+  243 |             if (std::find(open.begin(), open.end(), neighbor) == open.end()) {
+      |             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:245:20: note: +1, nesting level increased to 3
+  245 |             } else if (tentative_g_score >= g_score[neighbor.y * width + neighbor.x]) {
+      |                    ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:186:41: warning: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'uint32_t' (aka 'unsigned int') [bugprone-implicit-widening-of-multiplication-result]
+  186 |     std::vector<sf::Vector2u> came_from(width*height);
+      |                                         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:186:41: note: make conversion explicit to silence this warning
+  186 |     std::vector<sf::Vector2u> came_from(width*height);
+      |                                         ^~~~~~~~~~~~
+      |                                         static_cast<size_type>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:186:41: note: perform multiplication in a wider type
+  186 |     std::vector<sf::Vector2u> came_from(width*height);
+      |                                         ^~~~~
+      |                                         static_cast<size_type>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:187:35: warning: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'uint32_t' (aka 'unsigned int') [bugprone-implicit-widening-of-multiplication-result]
+  187 |     std::vector<uint32_t> g_score(width*height, std::numeric_limits<uint32_t>::max());
+      |                                   ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:187:35: note: make conversion explicit to silence this warning
+  187 |     std::vector<uint32_t> g_score(width*height, std::numeric_limits<uint32_t>::max());
+      |                                   ^~~~~~~~~~~~
+      |                                   static_cast<size_type>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:187:35: note: perform multiplication in a wider type
+  187 |     std::vector<uint32_t> g_score(width*height, std::numeric_limits<uint32_t>::max());
+      |                                   ^~~~~
+      |                                   static_cast<size_type>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:188:35: warning: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'uint32_t' (aka 'unsigned int') [bugprone-implicit-widening-of-multiplication-result]
+  188 |     std::vector<uint32_t> f_score(width*height, std::numeric_limits<uint32_t>::max());
+      |                                   ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:188:35: note: make conversion explicit to silence this warning
+  188 |     std::vector<uint32_t> f_score(width*height, std::numeric_limits<uint32_t>::max());
+      |                                   ^~~~~~~~~~~~
+      |                                   static_cast<size_type>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:188:35: note: perform multiplication in a wider type
+  188 |     std::vector<uint32_t> f_score(width*height, std::numeric_limits<uint32_t>::max());
+      |                                   ^~~~~
+      |                                   static_cast<size_type>( )
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:192:23: warning: statement should be inside braces [readability-braces-around-statements]
+  192 |         if (pos.x > 0) neighbors.push_back({pos.x-1, pos.y});
+      |                       ^                                      
+      |                        {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:192:34: warning: use emplace_back instead of push_back [modernize-use-emplace]
+  192 |         if (pos.x > 0) neighbors.push_back({pos.x-1, pos.y});
+      |                                  ^~~~~~~~~~~              ~
+      |                                  emplace_back(
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:193:23: warning: statement should be inside braces [readability-braces-around-statements]
+  193 |         if (pos.y > 0) neighbors.push_back({pos.x, pos.y-1});
+      |                       ^                                      
+      |                        {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:193:34: warning: use emplace_back instead of push_back [modernize-use-emplace]
+  193 |         if (pos.y > 0) neighbors.push_back({pos.x, pos.y-1});
+      |                                  ^~~~~~~~~~~              ~
+      |                                  emplace_back(
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:194:29: warning: statement should be inside braces [readability-braces-around-statements]
+  194 |         if (pos.x < width-1) neighbors.push_back({pos.x+1, pos.y});
+      |                             ^                                      
+      |                              {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:194:40: warning: use emplace_back instead of push_back [modernize-use-emplace]
+  194 |         if (pos.x < width-1) neighbors.push_back({pos.x+1, pos.y});
+      |                                        ^~~~~~~~~~~              ~
+      |                                        emplace_back(
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:195:30: warning: statement should be inside braces [readability-braces-around-statements]
+  195 |         if (pos.y < height-1) neighbors.push_back({pos.x, pos.y+1});
+      |                              ^                                      
+      |                               {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:195:41: warning: use emplace_back instead of push_back [modernize-use-emplace]
+  195 |         if (pos.y < height-1) neighbors.push_back({pos.x, pos.y+1});
+      |                                         ^~~~~~~~~~~              ~
+      |                                         emplace_back(
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:199:46: warning: parameter name 'a' is too short, expected at least 3 characters [readability-identifier-length]
+  199 |     auto heuristic = [&](const sf::Vector2u& a, const sf::Vector2u& b) {
+      |                                              ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:199:69: warning: parameter name 'b' is too short, expected at least 3 characters [readability-identifier-length]
+  199 |     auto heuristic = [&](const sf::Vector2u& a, const sf::Vector2u& b) {
+      |                                                                     ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:216:12: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
+  216 |     while (open.size()) {
+      |            ^~~~~~~~~~~
+      |            !open.empty()
+/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_vector.h:1088:7: note: method 'vector'::empty() defined here
+ 1088 |       empty() const _GLIBCXX_NOEXCEPT
+      |       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:216:12: warning: implicit conversion 'size_type' (aka 'unsigned long') -> 'bool' [readability-implicit-bool-conversion]
+  216 |     while (open.size()) {
+      |            ^          
+      |                        != 0u
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:237:60: warning: statement should be inside braces [readability-braces-around-statements]
+  237 |             if (!get_tile(neighbor.x, neighbor.y).passable) continue;
+      |                                                            ^         
+      |                                                             {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:239:83: warning: statement should be inside braces [readability-braces-around-statements]
+  239 |             if (std::find(closed.begin(), closed.end(), neighbor) != closed.end()) continue;
+      |                                                                                   ^         
+      |                                                                                    {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:257:19: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  257 | sf::Vector2u Map::get_random_passable() const {
+      | ~~~~~~~~~~~~      ^
+      | auto                                          -> sf::Vector2u
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:259:18: warning: variable name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+  259 |         uint32_t x = rand() % width;
+      |                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:260:18: warning: variable name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+  260 |         uint32_t y = rand() % height;
+      |                  ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:261:37: warning: statement should be inside braces [readability-braces-around-statements]
+  261 |         if (get_tile(x, y).passable) return {x, y};
+      |                                     ^              
+      |                                      {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:265:32: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  265 | std::vector<sf::Vector2u> Map::get_xys_within_radius(const sf::Vector2u& pos, const uint32_t radius) const {
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~      ^
+      | auto                                                                                                       -> std::vector<sf::Vector2u>
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:267:19: warning: loop variable name 'y' is too short, expected at least 2 characters [readability-identifier-length]
+  267 |     for (uint32_t y = 0; y < height; ++y) {
+      |                   ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:268:23: warning: loop variable name 'x' is too short, expected at least 2 characters [readability-identifier-length]
+  268 |         for (uint32_t x = 0; x < width; ++x) {
+      |                       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:270:21: warning: use emplace_back instead of push_back [modernize-use-emplace]
+  270 |                 xys.push_back({x, y});
+      |                     ^~~~~~~~~~~    ~
+      |                     emplace_back(
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.h:38:31: warning: function 'game::Map::get_xys_within_radius' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
+   38 |     std::vector<sf::Vector2u> get_xys_within_radius(const sf::Vector2u& xy, const uint32_t radius) const;
+      |                               ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp:265:32: note: the definition seen here
+  265 | std::vector<sf::Vector2u> Map::get_xys_within_radius(const sf::Vector2u& pos, const uint32_t radius) const {
+      |                                ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.h:38:31: note: differing parameters are named here: ('xy'), in definition: ('pos')
+   38 |     std::vector<sf::Vector2u> get_xys_within_radius(const sf::Vector2u& xy, const uint32_t radius) const;
+      |                               ^                                         ~~
+      |                                                                         pos
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp:5:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+    5 | bool Unit::can_move_to(const game::Map& map, const uint32_t x, const uint32_t y) const {
+      |            ^
+note: this fix will not be applied because it overlaps with another fix
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp:5:12: warning: method 'can_move_to' can be made static [readability-convert-member-functions-to-static]
+    5 | bool Unit::can_move_to(const game::Map& map, const uint32_t x, const uint32_t y) const {
+      |            ^                                                                     ~~~~~
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp:5:61: warning: parameter name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+    5 | bool Unit::can_move_to(const game::Map& map, const uint32_t x, const uint32_t y) const {
+      |                                                             ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp:5:79: warning: parameter name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+    5 | bool Unit::can_move_to(const game::Map& map, const uint32_t x, const uint32_t y) const {
+      |                                                                               ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp:6:74: warning: statement should be inside braces [readability-braces-around-statements]
+    6 |     if (x < 0 || y < 0 || x >= map.get_size().x || y >= map.get_size().y) return false;
+      |                                                                          ^             
+      |                                                                           {
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp:13:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   13 | bool Unit::try_move_to(game::Map& map, const uint32_t x, const uint32_t y) {
+      | ~~~~       ^
+      | auto                                                                       -> bool
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp:13:55: warning: parameter name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+   13 | bool Unit::try_move_to(game::Map& map, const uint32_t x, const uint32_t y) {
+      |                                                       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp:13:73: warning: parameter name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+   13 | bool Unit::try_move_to(game::Map& map, const uint32_t x, const uint32_t y) {
+      |                                                                         ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp:24:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   24 | bool Unit::can_act() const {
+      | ~~~~       ^
+      | auto                       -> bool
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp:28:55: warning: parameter name 'xy' is too short, expected at least 3 characters [readability-identifier-length]
+   28 | void Unit::set_xy(game::Map& map, const sf::Vector2u& xy) {
+      |                                                       ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp:6:36: error: no type named 'source_location' in namespace 'std' [clang-diagnostic-error]
+    6 | void log(std::string message, std::source_location location) noexcept {
+      |                               ~~~~~^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp:10:48: error: no type named 'source_location' in namespace 'std' [clang-diagnostic-error]
+   10 | void halt_catch_fire(std::string message, std::source_location location) {
+      |                                           ~~~~~^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp:15:7: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   15 | float distance(::sf::Vector2u a, ::sf::Vector2u b) {
+      | ~~~~~ ^
+      | auto                                               -> float
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp:15:31: warning: parameter name 'a' is too short, expected at least 3 characters [readability-identifier-length]
+   15 | float distance(::sf::Vector2u a, ::sf::Vector2u b) {
+      |                               ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp:15:49: warning: parameter name 'b' is too short, expected at least 3 characters [readability-identifier-length]
+   15 | float distance(::sf::Vector2u a, ::sf::Vector2u b) {
+      |                                                 ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp:16:12: warning: narrowing conversion from 'double' to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   16 |     return std::sqrt(std::pow(a.x - b.x, 2) + std::pow(a.y - b.y, 2));
+      |            ^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp:20:17: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   20 |     std::string to_string(::sf::Event::EventType etype)  {
+      |     ~~~~~~~~~~~ ^
+      |     auto                                                -> std::string
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.h:10:36: error: no type named 'source_location' in namespace 'std' [clang-diagnostic-error]
+   10 | void log(std::string message, std::source_location location = std::source_location::current()) noexcept;
+      |                               ~~~~~^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.h:10:68: error: no member named 'source_location' in namespace 'std' [clang-diagnostic-error]
+   10 | void log(std::string message, std::source_location location = std::source_location::current()) noexcept;
+      |                                                               ~~~~~^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.h:11:48: error: no type named 'source_location' in namespace 'std' [clang-diagnostic-error]
+   11 | void halt_catch_fire(std::string message, std::source_location location = std::source_location::current());
+      |                                           ~~~~~^
+/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.h:11:80: error: no member named 'source_location' in namespace 'std' [clang-diagnostic-error]
+   11 | void halt_catch_fire(std::string message, std::source_location location = std::source_location::current());
+      |                                                                           ~~~~~^
+Suppressed 174352 warnings (174352 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+Found compiler error(s).

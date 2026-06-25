@@ -1,0 +1,4 @@
+Benchmark 1: cd ONRL && cmake --build build --clean-first 2>/dev/null
+  Time (mean ± σ):     15.864 s ±  0.025 s    [User: 12.602 s, System: 3.262 s]
+  Range (min … max):   15.844 s … 15.901 s    5 runs
+ 

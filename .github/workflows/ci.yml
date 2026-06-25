@@ -1,0 +1,50 @@
+name: CI Build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: true   # fetch ONRL submodule
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev \
+                              libxi-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev \
+                              libudev-dev libopenal-dev libflac-dev libvorbis-dev libogg-dev \
+                              libfreetype6-dev \
+                              libgtest-dev lcov xvfb libsfml-dev
+
+      - name: Build ONRL
+        run: |
+          cd ONRL
+          mkdir -p build
+          cmake -B build -S .
+          cmake --build build
+
+      - name: Run ONRL (headless)
+        run: |
+          cd ONRL/build
+          ./ONRL || echo "Executable built but cannot run in CI (no display)"
+
+      - name: Install lizard
+        run: pip install lizard --break-system-packages
+
+      - name: Build and run unit tests
+        run: |
+          cd tools/unit-tests
+          xvfb-run bash run_tests.sh
+
+      - name: Run lizard
+        run: bash tools/lizard/run_lizard.sh
+
+      - name: Run hyperfine
+        run: bash tools/hyperfine/run_hyperfine.sh

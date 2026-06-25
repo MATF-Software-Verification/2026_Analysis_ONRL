@@ -1,0 +1,72 @@
+================================================
+  NLOC    CCN   token  PARAM  length  location  
+------------------------------------------------
+       3      1     64      2       3 render_unit@14-16@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp
+       9      3     79      2       9 get_random_unoccupied_tile@18-26@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp
+      11      7    100      1      11 get_player_action@38-48@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp
+     107     31    990      2     132 main@50-181@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp
+      37      5    418      4      59 gfx::Console::Console@6-64@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp
+      19      2    164      0      29 gfx::Console::render@66-94@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp
+       3      1     13      0       3 gfx::Console::window_display@96-98@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp
+       3      1     11      0       3 gfx::Console::get_window@100-102@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp
+       7      3     81      3       7 gfx::Console::set_glyph@104-110@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp
+       7      3     76      2       7 gfx::Console::get_glyph@112-118@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp
+      19      7    283      5      19 gfx::Console::set_region@130-148@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp
+       8      1     68      0       8 gfx::Console::get_mouse_tile_xy@150-157@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp
+       1      1     21      1       1 gfx::Console::poll_event@159-159@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp
+       3      1     41      3       3 game::Unit::Unit@21-23@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.h
+       1      1     14      0       1 game::Unit::Unit@24-24@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.h
+      10      1     70      1      10 game::Unit::operator =@25-34@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.h
+       3      1     35      0       3 game::Unit::~Unit@36-38@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.h
+       5      3     30      1       5 game::Unit::accumulate_ai_time@45-49@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.h
+       7      3     45      0       7 game::Map::Tile::get_glyph@16-22@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.h
+       1      1     22      2       1 game::Map::Map@30-30@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.h
+       7      3     87      6       7 game::make_room@12-18@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+      38     16    434      7      55 game::BSP_recurse_region@28-82@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+      20     11    221      3      20 game::CA_count_neighbors@84-103@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+       9      4    109      3       9 game::CA_anneal_region_impl@105-113@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+       5      2     52      4       5 game::CA_anneal_region@115-119@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+      14      3    104      3      15 game::enmossify@121-135@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+       7      2     78      0      13 game::Map::generate@139-151@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+       5      2     63      3       5 game::Map::render_to@153-157@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+       3      1     15      0       3 game::Map::get_size@159-161@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+       8      5     46      2       8 game::Map::get_tile@163-170@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+       8      5     45      2       8 game::Map::get_tile_mut@172-179@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+      60     15    749      2      74 game::Map::find_path@182-255@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+       7      3     50      0       7 game::Map::get_random_passable@257-263@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+      11      4    117      2      11 game::Map::get_xys_within_radius@265-275@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+       3      1     57      2       3 util::log@6-8@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp
+       4      1     29      2       4 util::halt_catch_fire@10-13@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp
+       3      1     52      2       3 util::distance@15-17@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp
+      29     25    287      1      29 util::sf::to_string@20-48@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp
+       7      6     87      3       7 game::Unit::can_move_to@5-11@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp
+      10      2     81      3      10 game::Unit::try_move_to@13-22@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp
+       3      1     13      0       3 game::Unit::can_act@24-26@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp
+       3      1     32      2       3 game::Unit::set_xy@28-30@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp
+10 file analyzed.
+==============================================================
+NLOC    Avg.NLOC  AvgCCN  Avg.token  function_cnt    file
+--------------------------------------------------------------
+    147      32.5    10.5      308.2         4     /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp
+    108      11.6     2.7      126.1         9     /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.cpp
+     41       4.4     1.4       38.0         5     /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.h
+     39       4.0     2.0       33.5         2     /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.h
+     26       0.0     0.0        0.0         0     /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/colors.h
+    211      14.4     5.4      155.0        14     /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+     37       0.0     0.0        0.0         0     /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/console.h
+     45       9.8     7.0      106.2         4     /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp
+     27       5.8     2.5       53.2         4     /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/unit.cpp
+     12       0.0     0.0        0.0         0     /home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.h
+
+===========================================================================================================
+!!!! Warnings (cyclomatic_complexity > 15 or length > 1000 or nloc > 1000000 or parameter_count > 100) !!!!
+================================================
+  NLOC    CCN   token  PARAM  length  location  
+------------------------------------------------
+     107     31    990      2     132 main@50-181@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/main.cpp
+      38     16    434      7      55 game::BSP_recurse_region@28-82@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/map.cpp
+      29     25    287      1      29 util::sf::to_string@20-48@/home/eufrosty/Desktop/vs/2026_Analysis_ONRL/ONRL/src/util.cpp
+==========================================================================================
+Total nloc   Avg.NLOC  AvgCCN  Avg.token   Fun Cnt  Warning cnt   Fun Rt   nloc Rt
+------------------------------------------------------------------------------------------
+       693      12.6     4.5      129.4       42            3      0.07    0.33

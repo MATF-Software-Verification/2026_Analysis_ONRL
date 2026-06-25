@@ -1,0 +1,131 @@
+src/console.h:3:0: information: Include file: <SFML/Graphics.hpp> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <SFML/Graphics.hpp>
+^
+src/console.h:4:0: information: Include file: <SFML/Window.hpp> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <SFML/Window.hpp>
+^
+src/console.h:5:0: information: Include file: <SFML/System.hpp> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <SFML/System.hpp>
+^
+src/console.h:6:0: information: Include file: <cstdint> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <cstdint>
+^
+src/console.h:7:0: information: Include file: <string> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string>
+^
+src/util.h:3:0: information: Include file: <source_location> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <source_location>
+^
+src/util.h:4:0: information: Include file: <iostream> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <iostream>
+^
+src/util.h:5:0: information: Include file: <SFML/Window.hpp> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <SFML/Window.hpp>
+^
+src/util.h:6:0: information: Include file: <SFML/Graphics.hpp> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <SFML/Graphics.hpp>
+^
+src/console.cpp:104:66: style: inconclusive: Function 'set_glyph' argument 3 names different: declaration 'g' definition 'glyph'. [funcArgNamesDifferent]
+void Console::set_glyph(uint32_t x, uint32_t y, Console::glyph_t glyph) {
+                                                                 ^
+src/console.h:33:52: note: Function 'set_glyph' argument 3 names different: declaration 'g' definition 'glyph'.
+    void set_glyph(uint32_t x, uint32_t y, glyph_t g);
+                                                   ^
+src/console.cpp:104:66: note: Function 'set_glyph' argument 3 names different: declaration 'g' definition 'glyph'.
+void Console::set_glyph(uint32_t x, uint32_t y, Console::glyph_t glyph) {
+                                                                 ^
+src/console.cpp:130:104: performance: Function parameter 'glyphs' should be passed by const reference. [passedByValue]
+void Console::set_region(uint32_t x, uint32_t y, uint32_t w, uint32_t h, std::vector<Console::glyph_t> glyphs) {
+                                                                                                       ^
+src/map.h:3:0: information: Include file: <array> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <array>
+^
+src/colors.h:3:0: information: Include file: <SFML/Graphics/Color.hpp> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <SFML/Graphics/Color.hpp>
+^
+src/map.h:6:0: information: Include file: <optional> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <optional>
+^
+src/main.cpp:6:0: information: Include file: <iostream> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <iostream>
+^
+src/main.cpp:7:0: information: Include file: <optional> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <optional>
+^
+src/main.cpp:8:0: information: Include file: <cstdint> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <cstdint>
+^
+src/main.cpp:72:20: style: Variable 'goblin' can be declared as reference to const [constVariableReference]
+        for (auto& goblin : goblins) {
+                   ^
+src/main.cpp:140:75: style: Consider using std::find_if algorithm instead of a raw loop. [useStlAlgorithm]
+                        if (map.get_tile(pos.x, pos.y).mossification > 0) {
+                                                                          ^
+src/map.cpp:2:0: information: Include file: <cstdlib> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <cstdlib>
+^
+src/map.cpp:3:0: information: Include file: <cassert> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <cassert>
+^
+src/map.cpp:4:0: information: Include file: <iostream> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <iostream>
+^
+src/map.cpp:5:0: information: Include file: <limits> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <limits>
+^
+src/map.cpp:111:31: style: Expression is always true because 'else if' condition is opposite to previous condition at line 110. [multiCondition]
+        else if (neighbors[i] >= 4) tiles[i].passable = false;
+                              ^
+src/map.cpp:110:26: note: first condition
+        if (neighbors[i] < 4) tiles[i].passable = true;
+                         ^
+src/map.cpp:111:31: note: else if condition is opposite to first condition
+        else if (neighbors[i] >= 4) tiles[i].passable = false;
+                              ^
+src/map.cpp:165:11: style: Unsigned expression 'x' can't be negative so it is unnecessary to test it. [unsignedPositive]
+        x >= 0    && y >= 0     &&
+          ^
+src/map.cpp:165:24: style: Unsigned expression 'y' can't be negative so it is unnecessary to test it. [unsignedPositive]
+        x >= 0    && y >= 0     &&
+                       ^
+src/map.cpp:174:11: style: Unsigned expression 'x' can't be negative so it is unnecessary to test it. [unsignedPositive]
+        x >= 0    && y >= 0     &&
+          ^
+src/map.cpp:174:24: style: Unsigned expression 'y' can't be negative so it is unnecessary to test it. [unsignedPositive]
+        x >= 0    && y >= 0     &&
+                       ^
+src/map.cpp:265:74: style: inconclusive: Function 'get_xys_within_radius' argument 1 names different: declaration 'xy' definition 'pos'. [funcArgNamesDifferent]
+std::vector<sf::Vector2u> Map::get_xys_within_radius(const sf::Vector2u& pos, const uint32_t radius) const {
+                                                                         ^
+src/map.h:38:73: note: Function 'get_xys_within_radius' argument 1 names different: declaration 'xy' definition 'pos'.
+    std::vector<sf::Vector2u> get_xys_within_radius(const sf::Vector2u& xy, const uint32_t radius) const;
+                                                                        ^
+src/map.cpp:265:74: note: Function 'get_xys_within_radius' argument 1 names different: declaration 'xy' definition 'pos'.
+std::vector<sf::Vector2u> Map::get_xys_within_radius(const sf::Vector2u& pos, const uint32_t radius) const {
+                                                                         ^
+src/map.cpp:108:20: style: Variable 'x' is assigned a value that is never used. [unreadVariable]
+        uint32_t x = i%w;
+                   ^
+src/map.cpp:109:20: style: Variable 'y' is assigned a value that is never used. [unreadVariable]
+        uint32_t y = i/w;
+                   ^
+src/unit.cpp:6:11: style: Checking if unsigned expression 'x' is less than zero. [unsignedLessThanZero]
+    if (x < 0 || y < 0 || x >= map.get_size().x || y >= map.get_size().y) return false;
+          ^
+src/unit.cpp:6:20: style: Checking if unsigned expression 'y' is less than zero. [unsignedLessThanZero]
+    if (x < 0 || y < 0 || x >= map.get_size().x || y >= map.get_size().y) return false;
+                   ^
+src/util.cpp:2:0: information: Include file: <cmath> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <cmath>
+^
+src/util.cpp:6:22: performance: Function parameter 'message' should be passed by const reference. [passedByValue]
+void log(std::string message, std::source_location location) noexcept {
+                     ^
+src/console.cpp:130:0: style: The function 'set_region' is never used. [unusedFunction]
+void Console::set_region(uint32_t x, uint32_t y, uint32_t w, uint32_t h, std::vector<Console::glyph_t> glyphs) {
+^
+src/main.cpp:18:0: style: The function 'get_random_unoccupied_tile' is never used. [unusedFunction]
+sf::Vector2u get_random_unoccupied_tile(const game::Map& map, const game::Unit) {
+^
+nofile:0:0: information: Active checkers: 172/592 (use --checkers-report=<filename> to see details) [checkersReport]
+
